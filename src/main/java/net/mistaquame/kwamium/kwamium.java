@@ -15,16 +15,16 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.mistaquame.kwamium.block.ModBlocks;
 import net.mistaquame.kwamium.item.ModItems;
+import net.mistaquame.kwamium.item.modCreativeModeTabs;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(kwamium.MOD_ID)
-public class kwamium
-{
+public class kwamium {
 
     public static final String MOD_ID = "kwamium";
-
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public kwamium()
@@ -32,7 +32,11 @@ public class kwamium
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 
+        modCreativeModeTabs.register(modEventBus);
+
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);

@@ -1,3 +1,7 @@
 {
-  "item.kwamium.kwamium": "Kwamium"
+  "item.kwamium.kwamium": "Kwamium",
+
+  "block.kwamium.kwamium_ore": "Kwamium Ore",
+
+  "creativetab.kwamium_tab": "Kwamium Mod"
 }
